@@ -1,0 +1,85 @@
+.tabla-U {
+  width: 90%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-U thead th {
+  background-color: #8f8fee;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+  text-align: left;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.tabla-U tbody tr {
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+
+.tabla-U tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+.tabla-U tbody tr:hover {
+  background-color: #eaeaea;
+}
+
+.tabla-U td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+.tabla-U button.boton-eliminar {
+  background-color: #e74c3c;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tabla-U button.boton-eliminar:hover {
+  background-color: #c0392b;
+}
+
+.tabla-U button.boton-eliminar img {
+  width: 15px;
+  vertical-align: middle;
+}
+
+.tabla-U img {
+  display: block;
+}
+.contenedor-registrar-personal {
+  max-width: 1000px;
+  max-height: 550px;
+  width: 40%;
+  height: 65vh;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+@media (max-width: 860px) {
+  .contenedor-registrar-personal {
+    width: 80%;
+    padding: 15px;
+    height: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-registrar-personal {
+    width: 90%;
+    padding: 10px;
+    height: 60%;
+  }
+}

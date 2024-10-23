@@ -1,0 +1,83 @@
+.table-filter  {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse !important;
+    box-shadow: 1px 4px 8px rgb(0, 0, 0); 
+    border-radius: 8px;
+  }
+  .contenedor_botones button{
+    background-color: #15616d;
+  }
+  
+  .table-filter thead th {
+    background-color: #15616d;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  
+  }
+  
+  .table-filter tbody tr {
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+
+  }
+  
+  .table-filter tbody tr:nth-child(even) {
+    background-color: #f1f1f1;
+  }
+  
+  .table-filter tbody tr:hover {
+    background-color: #eaeaea;
+  }
+  
+  .table-filter td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+   
+    
+  }
+  
+  .table-filter td img {
+    vertical-align: middle;
+  }
+  
+  .table-filter td button {
+    /* background-color: #2980b9; */
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .table-filter  td button:hover {
+    background-color: #1c5980;
+  }
+  
+  .table-filter button.boton-eliminar {
+    background-color: #e74c3c;
+    border: none;
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .table-filter  button.boton-eliminar:hover {
+    background-color: #c0392b;
+  }
+ 
+  .table-filter button img {
+    width: 15px;
+    display: block;
+  }
+  
+  .table-filter img {
+    display: block;
+  }
+  

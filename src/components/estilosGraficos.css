@@ -1,0 +1,69 @@
+
+
+.mixed-chart {
+  width: 30%;
+}
+@media (max-width: 960px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /* z-index: 10000; */
+  }
+  .mixed-chart {
+    width: 50%;
+  }
+}
+@media (max-width: 460px) {
+  .mixed-chart {
+    width: 90%;
+  }
+}
+.tableGrafico {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 18px;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.tableGrafico thead {
+  background-color: #1E6773;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tableGrafico th,
+.tdt {
+  padding: 12px 15px;
+  /* border-bottom: 1px solid #ddd; */
+}
+
+.tableGrafico tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.tableGrafico tbody tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.tableGrafico td {
+  text-align: center;
+}
+
+.tableGrafico thead th {
+  position: sticky;
+  top: 0;
+}
+
+ .tableGrafico  tbody td {
+    border-right: 1px solid #dddddd;
+  }
+
+ .tableGrafico tbody tr:last-of-type {
+    border-bottom: 2px solid #1E6773;
+  }
+  
