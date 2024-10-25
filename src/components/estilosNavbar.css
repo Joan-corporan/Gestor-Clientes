@@ -1,76 +1,71 @@
-
 .hamburger-button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-  }
-  .navbar-title {
-    font-size: 24px;
-    font-weight: bold;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
 }
-  .register-button{
-    font-size: 20px;
-  } 
-  .login-button{
-    font-size: 20px;
-  }
-  .register-button:hover {
-    box-shadow: 1px 2px 3px #15616d;
-    transition: 200ms;
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.register-button {
+  font-size: 20px;
+}
+.login-button {
+  font-size: 20px;
+}
+.register-button:hover {
+  box-shadow: 1px 2px 3px #15616d;
+  transition: 200ms;
 }
 
-  
-  .menu {
-    width: 20%;
-  height:85%;
+.menu {
+  width: 20%;
+  height: 85%;
   position: absolute;
   top: 93px;
   left: 0;
   background-color: white;
- max-width: 300px;
+  max-width: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  }
-  .menu:hover{
+}
+.menu:hover {
   transition: 300ms;
+}
 
+.menu button {
+  padding: 30px 0 30px 0;
+  text-align: center;
+  background-color: white;
+  margin: 5px 0;
+  color: #15616d;
+  width: 100%;
+}
+.navbar {
+  background-color: #15616d;
+}
+.userbotonHamburguesa {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 860px) {
+  .menu {
+    width: 80%;
+    padding: 15px;
+    height: 100%;
   }
-  
-  .menu button  {
-    padding: 30px 0 30px 0;
-    text-align: center;
-    background-color: white;
-    margin: 5px 0;
-    color:#15616d;
-    width: 100%;
-    
-  }
-  .navbar{
-    background-color: #15616d;
-  }
-  .userbotonHamburguesa{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  @media (max-width: 860px) {
-    .menu {
-      width: 80%;
-      padding: 15px;
-      height:100%;
-    }
-  }
-  
-  /* @media (max-width: 480px) {
+}
+
+/* @media (max-width: 480px) {
     .menu {
       width: 100vw;
       padding: 10px;
       height:100%;
     }
   } */
-  
