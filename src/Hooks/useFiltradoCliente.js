@@ -9,6 +9,7 @@ import validator from "validator";
 export function useFiltradoCliente() {
   const [clientes, setClientes] = useState([]);
   const [loading, setLoading] = useState(false);
+  console.log(loading)
   const [error, setError] = useState(null);
   const URL="https://api-storbox-prueba.vercel.app/api/clients/"
   const [filters, setFilters] = useState({
