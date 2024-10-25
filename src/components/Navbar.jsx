@@ -124,7 +124,7 @@ console.log(".........................................")
             <img style={{marginLeft:"10px"}} src="public/user.svg" alt="" />
             <button style={{marginLeft:"30px", backgroundColor:"#15616D" }}  onClick={handleLogout} >
                 
-            <img  src="public/logout.svg" alt="" />
+            <img  src="/logout.svg" alt="icon" />
               </button>
 
           </span>

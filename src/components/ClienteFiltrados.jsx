@@ -304,7 +304,7 @@ const ClientesFiltrados = () => {
                       >
                         <img
                           style={{ width: "15px" }}
-                          src="public/pencil.svg"
+                          src="/pencil.svg"
                           alt="icon"
                         />
                       </button>
@@ -315,7 +315,7 @@ const ClientesFiltrados = () => {
                       >
                         <img
                           style={{ width: "15px" }}
-                          src="public/delete.svg"
+                          src="/delete.svg"
                           alt="icon"
                         />
                       </button>

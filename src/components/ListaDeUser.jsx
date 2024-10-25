@@ -165,7 +165,7 @@ export const ListaDeUser = () => {
                   >
                     <img
                       style={{ width: "15px" }}
-                      src="public/delete.svg"
+                      src="/delete.svg"
                       alt="icon"
                     />
                   </button>

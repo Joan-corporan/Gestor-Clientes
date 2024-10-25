@@ -66,10 +66,6 @@ const Login = () => {
       });
     }
     try {
-      /*  const response = await axios.post(
-        `${URL}/api/clients/login`,
-          loginUser
-        ); */
       const response = await axios.post(
         "https://api-storbox-prueba.vercel.app/api/clients/login",
         loginUser
