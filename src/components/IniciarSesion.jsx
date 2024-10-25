@@ -5,12 +5,15 @@ const IniciarSesion = () => {
   const [rut, setRut] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState(null);
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
+
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/api/clients/api/login', {
+      const response = await axios.post(`${URL}login`, {
         rut,
         password,
       });
@@ -18,9 +21,7 @@ const IniciarSesion = () => {
       // Almacena el token en el almacenamiento local o en una cookie
       localStorage.setItem('token', response.data.token);
       
-      // Redirigir o realizar alguna acción después de un inicio de sesión exitoso
-      // Por ejemplo, redirigir al usuario a la página principal
-      /* window.location.href = '/home';  */
+    
       
     } catch (err) {
       setError('Credenciales incorrectas. Inténtalo de nuevo.');

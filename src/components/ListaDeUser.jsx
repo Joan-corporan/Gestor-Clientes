@@ -11,6 +11,9 @@ import "./login.css";
 export const ListaDeUser = () => {
   const [listtaUser, setListaUser] = useState([]);
   const token = localStorage.getItem("token");
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
+
+
   const rutUserLogger = localStorage.getItem("userRut");
  console.log(rutUserLogger)
 
@@ -19,7 +22,7 @@ export const ListaDeUser = () => {
   const getListaU = async () => {
     try {
         const response = await axios.get(
-      `http://localhost:3000/api/clients/getUserList?rut=${rutUserLogger}`,
+      `${URL}getUserList?rut=${rutUserLogger}`,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -47,7 +50,7 @@ export const ListaDeUser = () => {
     console.log("Eliminando usuario con RUT:", user.rut);
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/clients/usuarios/${user.rut}`,
+        `${URL}usuarios${user.rut}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

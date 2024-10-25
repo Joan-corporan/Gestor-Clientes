@@ -10,6 +10,7 @@ export function useFiltradoCliente() {
   const [clientes, setClientes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
   const [filters, setFilters] = useState({
     id_sucursal: "",
     nombre_cliente: "",
@@ -42,7 +43,7 @@ export function useFiltradoCliente() {
   const EliminarCliente = async (cliente) => {
     try {
       const response = await axios.delete(
-        `http://localhost:3000/api/clients/${cliente.rut_cliente}`,
+        `${URL}${cliente.rut_cliente}`,
         {
           headers: {
             Authorization: `Bearer ${token}`, // Agregar token en el header
@@ -238,7 +239,7 @@ export function useFiltradoCliente() {
         });
       }
       const { data } = await axios.get(
-        "http://localhost:3000/api/clients/filtro",
+        `${URL}filtro`,
         {
           params: {
             ...filters,

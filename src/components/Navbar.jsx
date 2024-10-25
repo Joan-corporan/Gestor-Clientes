@@ -44,7 +44,7 @@ console.log(".........................................")
     navegate("/clientes-filtrados");
   };
   const btnDasboard = () => {
-    navegate("/dashborad");
+    navegate("/dashboard");
   };
 
   const toggleMenu = () => {

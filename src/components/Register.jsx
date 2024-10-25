@@ -11,6 +11,7 @@ import Navbar from "./Navbar";
 
 const Register = () => {
   const [errores, setErrores] = useState({});
+ 
 
   const [userR, setUserR] = useState({
     rut: "",
@@ -19,17 +20,14 @@ const Register = () => {
     confirmPassword: "",
   });
   const handleChange = (e) => {
-   /*  console.log(e); */
+
     const { name, value } = e.target;
     setUserR({
       ...userR,
       [name]: value,
     });
   };
-  /* const validarRut = (rut) => {
-    const regex = /^[0-9]{7,8}-[0-9Kk]{1}$/;
-    return regex.test(rut);
-  }; */
+
   const validarContraseña = (password) => {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
     return regex.test(password);
@@ -41,6 +39,8 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
+
     const token = localStorage.getItem("token");
   
     if (
@@ -100,7 +100,7 @@ const Register = () => {
     try {
      
         const response = await axios.post(
-          "http://localhost:3000/api/clients/api/registrarse",
+          `${URL}registrarse`,
           userR,
           {
             headers: {

@@ -12,6 +12,8 @@ import validator from 'validator';
 export function useModal() {
   const [clienteSeleccionado, setClienteSeleccionado] = useState(null); // Almacena el cliente seleccionado para editar
   const [mostrarModal, setMostrarModal] = useState(false);
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
+
   const { clientes, setClientes } = useFiltradoCliente();
   const token = localStorage.getItem("token");
   const {  validarNombre, validarSucursal, validarTelefono } =
@@ -39,7 +41,7 @@ export function useModal() {
     });
   };
   const guardarCliente = async () => {
-    const errorealEditar = {};
+   
     if (
       clienteSeleccionado.email_cliente &&
       !validator.isEmail(clienteSeleccionado.email_cliente)
@@ -99,7 +101,7 @@ export function useModal() {
     try {
       // Realiza la petición PUT al backend con los datos del cliente seleccionado
       const response = await axios.put(
-        `http://localhost:3000/api/clients/${clienteSeleccionado.rut_cliente}`,
+        `${URL}${clienteSeleccionado.rut_cliente}`,
         clienteSeleccionado,
         {
           headers: {

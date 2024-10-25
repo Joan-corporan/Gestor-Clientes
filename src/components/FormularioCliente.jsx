@@ -11,6 +11,8 @@ import validator from 'validator';
 
 const FormularioCliente = () => {
   const token = localStorage.getItem('token');
+  const URL="https://api-storbox-prueba-git-main-joan-corporan-s-team.vercel.app/?vercelToolbarCode=0fSueYv6UFlhUkY"
+
   const [cliente, setCliente] = useState({
     id_sucursal: '',
     nombre_cliente: '',
@@ -103,7 +105,7 @@ const FormularioCliente = () => {
 
    
       try {
-        const response = await axios.post('http://localhost:3000/api/clients/create',cliente,  {
+        const response = await axios.post(`${URL}create,${cliente}`,  {
           headers: {
             'Authorization': `Bearer ${token}`, 
           }

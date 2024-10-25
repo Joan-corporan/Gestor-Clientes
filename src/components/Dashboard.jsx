@@ -8,6 +8,9 @@ import Swal from "sweetalert2";
 
 export const Dashboard = () => {
   const [clientsTable, setClientsTable] = useState([]);
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
+
+
   const [options, setOptions] = useState({
     chart: {
       id: "basic-bar",
@@ -59,7 +62,7 @@ export const Dashboard = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/clients/getAll",
+          `${URL}getAll`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

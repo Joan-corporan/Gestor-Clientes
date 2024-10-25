@@ -5,11 +5,14 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import NavbarLogin from "./NavbarLogin";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 import { formatRut, validateRut } from "@fdograph/rut-utilities";
-
+/* import URL from "../.env" */
 
 const Login = () => {
+  const URL =
+    "https://api-storbox-prueba-git-main-joan-corporan-s-team.vercel.app";
+
   const [loginUser, setloginUser] = useState({
     rut: "",
     password: "",
@@ -21,15 +24,13 @@ const Login = () => {
       [name]: value,
     });
   };
-  console.log(".........................................")
+  console.log(".........................................");
 
+  console.log("Rut validado para poder iniciar sesion:54735492-3 ");
+  console.log(validateRut(formatRut("54735492-3")));
+  console.log("Contraseña: Joan123");
 
-console.log("Rut validado para poder iniciar sesion:54735492-3 ")
-console.log(validateRut(formatRut("54735492-3")))
-console.log("Contraseña: Joan123")
-
-
-console.log(".........................................")
+  console.log(".........................................");
   const [errorMensaje, seterrorMensaje] = useState({});
   const navigate = useNavigate();
 
@@ -39,7 +40,7 @@ console.log(".........................................")
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-   
+
     if (loginUser.rut === "" || loginUser.password === "") {
       return Swal.fire({
         title: "¡Error!",
@@ -49,50 +50,51 @@ console.log(".........................................")
       });
     }
     if (!validarPassword(loginUser.password)) {
-      return  Swal.fire({
+      return Swal.fire({
         title: "¡Error!",
-        text: "El formato de la contraseña no es válido" ,
+        text: "El formato de la contraseña no es válido",
         icon: "error",
         confirmButtonText: "Aceptar",
       });
-      
     }
     if (!validateRut(formatRut(loginUser.rut))) {
-      return  Swal.fire({
+      return Swal.fire({
         title: "¡Error!",
-        text: "El formato del Rut no es válido" ,
+        text: "El formato del Rut no es válido",
         icon: "error",
         confirmButtonText: "Aceptar",
       });
-      
     }
     try {
-      
-        const response = await axios.post(
-          "http://localhost:3000/api/clients/api/login",
+      /*  const response = await axios.post(
+        `${URL}/api/clients/login`,
           loginUser
-        );
-        const { token, message, user } = response.data;
-        localStorage.setItem("token", token);
-        localStorage.setItem("userName", user.nombre);
-        localStorage.setItem("userRut", user.rut);
+        ); */
+      const response = await axios.post(
+        "https://api-storbox-prueba.vercel.app/api/clients/login",
+        loginUser
+      );
 
-        setloginUser({
-          rut: "",
-          password: "",
-        });
-        console.log(message);
-        navigate("dashboard");
-        console.log(response.data);
-      
+      const { token, message, user } = response.data;
+      localStorage.setItem("token", token);
+      localStorage.setItem("userName", user.nombre);
+      localStorage.setItem("userRut", user.rut);
+
+      setloginUser({
+        rut: "",
+        password: "",
+      });
+      console.log(message);
+      navigate("dashboard");
+      console.log(response.data);
     } catch (error) {
       Swal.fire({
         title: "¡Error!",
-        text: `${error.response.data.message}`,
+        text: `${error}`,
         icon: "error",
         confirmButtonText: "Aceptar",
       });
-      console.error("Error al iniciar sesión:", error.response.data.message);
+      console.error("Error al iniciar sesión:", error);
     }
   };
 
@@ -100,17 +102,20 @@ console.log(".........................................")
     <>
       <NavbarLogin />
       <motion.div
-       initial={{ x: '-100%', opacity: 0 }} 
-       animate={{ x: 0, opacity: 1 }} 
-      
-       transition={{ duration: 1.5 }} 
-
+        initial={{ x: "-100%", opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1.5 }}
         className="container-login"
       >
         <h2>Iniciar Sesión</h2>
-        <table style={{width:"100%", display:"flex",
-          justifyContent:"center", alignItems:"center"
-        }}>
+        <table
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <tbody>
             <tr>
               <td>
@@ -130,7 +135,6 @@ console.log(".........................................")
                             value={loginUser.rut}
                             placeholder="12345678-2"
                           />
-                         
                         </td>
                       </tr>
                       <tr>
@@ -146,7 +150,6 @@ console.log(".........................................")
                             value={loginUser.password}
                             placeholder="Ejemplo123"
                           />
-                         
                         </td>
                       </tr>
                       <tr>
@@ -155,7 +158,7 @@ console.log(".........................................")
                             style={{
                               backgroundColor: "#15616D",
                               marginTop: "10px",
-                              width:"50%"
+                              width: "50%",
                             }}
                             type="submit"
                           >
