@@ -20,18 +20,7 @@
     box-shadow: 1px 2px 3px #15616d;
     transition: 200ms;
 }
- .keyf{
-  position: relative;
-  animation: keyf 2s infinite;
- }
-@keyframes keyf{
-  0%, 100% {
-    transform: translateY(0); /* El elemento comienza y termina en su posición original */
-  }
-  50% {
-    transform: translateY(-50px); /* El elemento sube 50px hacia arriba */
-  }
-}
+
   
   .menu {
     width: 20%;
