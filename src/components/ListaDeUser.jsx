@@ -50,7 +50,7 @@ export const ListaDeUser = () => {
     console.log("Eliminando usuario con RUT:", user.rut);
     try {
       const response = await axios.delete(
-        `${URL}usuarios${user.rut}`,
+        `${URL}usuarios/${user.rut}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
