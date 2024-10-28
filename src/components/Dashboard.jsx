@@ -195,8 +195,8 @@ export const Dashboard = () => {
         <thead>
           <tr>
             <th>Sucursal</th>
-            <th>genero</th>
-            <th>fecha_registro</th>
+            <th>Genero</th>
+            <th>Fecha de Registro</th>
           </tr>
         </thead>
         <tbody>
