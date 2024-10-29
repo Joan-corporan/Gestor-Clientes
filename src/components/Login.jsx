@@ -82,11 +82,11 @@ const Login = () => {
       });
       console.log(message);
       navigate("dashboard");
-      console.log(response.data);
+      console.log(response.data.message);
     } catch (error) {
       Swal.fire({
         title: "¡Error!",
-        text: `${error}`,
+        text: `${error.response.data.message}`,
         icon: "error",
         confirmButtonText: "Aceptar",
       });
