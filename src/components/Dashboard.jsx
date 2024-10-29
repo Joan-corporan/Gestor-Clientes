@@ -8,8 +8,8 @@ import Swal from "sweetalert2";
 
 export const Dashboard = () => {
   const [clientsTable, setClientsTable] = useState([]);
-  /* const URL="https://api-storbox-prueba.vercel.app/api/clients/" */
-  const URL="http://localhost:3000/api/clients/"
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
+  /* const URL="http://localhost:3000/api/clients/" */
 
 
 
