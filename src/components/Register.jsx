@@ -40,7 +40,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
   const URL="https://api-storbox-prueba.vercel.app/api/clients/"
- /* const URL="http://localhost:3000/api/clients/" */
+ 
 
 
     const token = localStorage.getItem("token");
@@ -127,7 +127,7 @@ const Register = () => {
           setErrores("");
       
     } catch (error) {
-      console.error("Error al registrar", error);
+      console.log("Error al registrar", error);
       Swal.fire({
         title: '¡Error!',
         text: `${error.response.data.message}`,
