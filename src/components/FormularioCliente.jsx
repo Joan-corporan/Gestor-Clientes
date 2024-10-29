@@ -10,6 +10,7 @@ import validator from 'validator';
 
 
 const FormularioCliente = () => {
+  /* const URL="http://localhost:3000/api/clients/" */
   const token = localStorage.getItem('token');
   const URL="https://api-storbox-prueba-git-main-joan-corporan-s-team.vercel.app/?vercelToolbarCode=0fSueYv6UFlhUkY"
 
@@ -105,11 +106,14 @@ const FormularioCliente = () => {
 
    
       try {
-        const response = await axios.post(`${URL}create,${cliente}`,  {
+        const response = await axios.post(`${URL}create`, cliente, {
           headers: {
             'Authorization': `Bearer ${token}`, 
           }
         });
+        
+        
+
        
         Swal.fire({
           title: '¡Éxito!',
