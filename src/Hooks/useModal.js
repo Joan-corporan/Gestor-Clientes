@@ -12,8 +12,8 @@ import validator from 'validator';
 export function useModal() {
   const [clienteSeleccionado, setClienteSeleccionado] = useState(null); // Almacena el cliente seleccionado para editar
   const [mostrarModal, setMostrarModal] = useState(false);
-  /* const URL="https://api-storbox-prueba.vercel.app/api/clients/" */
-  const URL="http://localhost:3000/api/clients/"
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
+ /*  const URL="http://localhost:3000/api/clients/" */
 
 
   const { clientes, setClientes } = useFiltradoCliente();
