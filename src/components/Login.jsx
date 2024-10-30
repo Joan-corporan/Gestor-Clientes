@@ -10,8 +10,8 @@ import { formatRut, validateRut } from "@fdograph/rut-utilities";
 /* import URL from "../.env" */
 
 const Login = () => {
-  const URL = "https://api-storbox-prueba-git-main-joan-corporan-s-team.vercel.app";
-   
+  const URL =
+    "https://api-storbox-prueba-git-main-joan-corporan-s-team.vercel.app";
 
   const [loginUser, setloginUser] = useState({
     rut: "",
@@ -66,14 +66,14 @@ const Login = () => {
       });
     }
     try {
-      const response = await axios.post(
+      /* const response = await axios.post(
         "https://api-storbox-prueba.vercel.app/api/clients/login",
         loginUser
-      );
-      /* const response = await axios.post(
+      ); */
+      const response = await axios.post(
         "http://localhost:3000/api/clients/login",
         loginUser
-      ); */
+      );
 
       const { token, message, user } = response.data;
       localStorage.setItem("token", token);

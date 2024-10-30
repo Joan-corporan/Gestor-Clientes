@@ -10,8 +10,8 @@ export function useFiltradoCliente() {
   const [clientes, setClientes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
- /*  const URL="http://localhost:3000/api/clients/" */
+ /*  const URL="https://api-storbox-prueba.vercel.app/api/clients/" */
+  const URL="http://localhost:3000/api/clients/"
   const [filters, setFilters] = useState({
     id_sucursal: "",
     nombre_cliente: "",

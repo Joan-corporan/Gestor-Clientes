@@ -39,8 +39,8 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
- /* const URL="http://localhost:3000/api/clients/" */
+ /*  const URL="https://api-storbox-prueba.vercel.app/api/clients/" */
+ const URL="http://localhost:3000/api/clients/"
 
 
     const token = localStorage.getItem("token");
@@ -126,18 +126,17 @@ const Register = () => {
           });
           setErrores("");
       
-    } catch (error) {
-      console.error("Error al registrar", error);
+    }catch (error) {
+      console.log("Error al registrar", error);
+      const errorMessage = error.response?.data?.message || "Error inesperado";
       Swal.fire({
         title: '¡Error!',
-        text: `${error.response.data.message}`,
+        text: errorMessage,
         icon: 'error',
         confirmButtonText: 'Aceptar',
       });
-   
-      
-      return;
     }
+    
   };
 
   return (

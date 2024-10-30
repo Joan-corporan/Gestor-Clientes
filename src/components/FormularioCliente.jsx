@@ -10,9 +10,9 @@ import validator from 'validator';
 
 
 const FormularioCliente = () => {
-  /* const URL="http://localhost:3000/api/clients/" */
+  const URL="http://localhost:3000/api/clients/"
   const token = localStorage.getItem('token');
-  const URL="https://api-storbox-prueba-git-main-joan-corporan-s-team.vercel.app/?vercelToolbarCode=0fSueYv6UFlhUkY"
+ /*  const URL="https://api-storbox-prueba-git-main-joan-corporan-s-team.vercel.app/?vercelToolbarCode=0fSueYv6UFlhUkY" */
 
   const [cliente, setCliente] = useState({
     id_sucursal: '',
