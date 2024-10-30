@@ -56,6 +56,13 @@ export function useFiltradoCliente() {
         cosnoleo.log("Accion confirmada!")
       }else{
         console.log("Accion cancelada")
+          Swal.fire({
+      title:'Exito',
+      text:' Operación Cancelada',
+      icon:'sucess',
+      confirmButtonText:'Aceptar'
+      
+    }
       }
     })
   }
