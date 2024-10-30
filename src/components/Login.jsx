@@ -10,8 +10,7 @@ import { formatRut, validateRut } from "@fdograph/rut-utilities";
 /* import URL from "../.env" */
 
 const Login = () => {
-  const URL =
-    "https://api-storbox-prueba-git-main-joan-corporan-s-team.vercel.app";
+ const URL="https://api-storbox-prueba.vercel.app/api/clients/";
 
   const [loginUser, setloginUser] = useState({
     rut: "",
