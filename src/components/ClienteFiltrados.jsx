@@ -17,7 +17,7 @@ const ClientesFiltrados = () => {
     loading,
     limpiarGrilla,
     exportarExcel,
-    EliminarCliente,
+    manejarModalDelete
   } = useFiltradoCliente();
 
   const {
@@ -311,7 +311,7 @@ const ClientesFiltrados = () => {
                       <button
                         style={{ marginLeft: "5px" }}
                         className="boton-eliminar"
-                        onClick={() => EliminarCliente(cliente)}
+                        onClick={() => manejarModalDelete(cliente)}
                       >
                         <img
                           style={{ width: "15px" }}
