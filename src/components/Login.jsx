@@ -70,7 +70,7 @@ const Login = () => {
         loginUser
       ); */
       const response = await axios.post(
-        `${URL}/login`,
+        `${URL}login`,
         loginUser
       );
 
