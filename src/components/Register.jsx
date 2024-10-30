@@ -39,8 +39,8 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
- /*  const URL="https://api-storbox-prueba.vercel.app/api/clients/" */
- const URL="http://localhost:3000/api/clients/"
+  const URL="https://api-storbox-prueba.vercel.app/api/clients/"
+ /* const URL="http://localhost:3000/api/clients/" */
 
 
     const token = localStorage.getItem("token");
