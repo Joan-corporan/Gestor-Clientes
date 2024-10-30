@@ -41,6 +41,25 @@ export function useFiltradoCliente() {
   const limpiarGrilla = () => {
     setClientes([]);
   };
+  const manejarModalDelete=(cliente)=>{
+    Swal.fire({
+      title:'¿Estas seguro que deseas eliminar el Cliente?',
+      text:'no podras revertir esta accion',
+      icon:'warning',
+      showCancelButton: true,
+      confirmButtonText:'Aceptar',
+      cancelButtonText:'Cancelar'
+      
+    }).then((resultado)=>{
+      if(resultado.isConfirmed){
+        EliminarCliente(cliente)
+        cosnoleo.log("Accion confirmada!")
+      }else{
+        console.log("Accion cancelada")
+      }
+    })
+  }
+    
   const EliminarCliente = async (cliente) => {
     try {
       const response = await axios.delete(
@@ -279,6 +298,6 @@ export function useFiltradoCliente() {
     setFilters,
     limpiarGrilla,
     exportarExcel,
-    EliminarCliente,
+    manejarModalDelete
   };
 }
