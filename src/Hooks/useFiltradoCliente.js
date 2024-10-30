@@ -54,17 +54,16 @@ export function useFiltradoCliente() {
       if(resultado.isConfirmed){
         EliminarCliente(cliente)
         cosnoleo.log("Accion confirmada!")
-      }else{
-        console.log("Accion cancelada")
-          Swal.fire({
-      title:'Exito',
-      text:' Operación Cancelada',
-      icon:'sucess',
-      confirmButtonText:'Aceptar'
-      
-    }
+      } else {
+        console.log("Acción cancelada");
+        Swal.fire({
+          title: 'Éxito',
+          text: 'Operación cancelada',
+          icon: 'success',
+          confirmButtonText: 'Aceptar'
+        });
       }
-    })
+    });
   }
     
   const EliminarCliente = async (cliente) => {
