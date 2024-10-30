@@ -43,8 +43,8 @@ export function useFiltradoCliente() {
   };
   const manejarModalDelete=(cliente)=>{
     Swal.fire({
-      title:'¿Estas seguro que deseas eliminar el Cliente?',
-      text:'no podras revertir esta accion',
+      title:'¿Estás seguro de que deseas eliminar al cliente?',
+      text:' No podrás revertir esta acción',
       icon:'warning',
       showCancelButton: true,
       confirmButtonText:'Aceptar',
