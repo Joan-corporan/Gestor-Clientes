@@ -59,13 +59,7 @@ export const ListaDeUser = () => {
     }).then((response) => {
       if (response.isConfirmed) {
         deleteUserOfList(user);
-        Swal.fire({
-          title: "Usuario eliminado!",
-          text: "El usuario ha sido eliminado exitosamente.",
-          icon: "success",
-          confirmButtonColor: "#15616D",
-          confirmButtonText: "Aceptar",
-        });
+        
       } else {
         Swal.fire({
           title: "Cancelado Correctamenete",
@@ -94,6 +88,7 @@ export const ListaDeUser = () => {
         title: "Usuario eliminado!",
         text: "El usuario ha sido eliminado exitosamente.",
         icon: "success",
+        confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     } catch (error) {
