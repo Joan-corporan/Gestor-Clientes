@@ -9,7 +9,7 @@ const Navbar = () => {
   const navegate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
 
-
+const admin= localStorage.getItem("admin")==="true";
   const nombreUserLogiado = localStorage.getItem("userName");
  
   const handleLogout = () => {
@@ -95,15 +95,20 @@ console.log(".........................................")
                 <span className="keyf">Registrar Cliente</span>
                 
               </button>
-              <button onClick={btnRegistrarPersonal} className="register-button">
+              {admin && (
+              <>
+               <button
+                onClick={btnRegistrarPersonal}
+                className="register-button"
+              >
                 <span className="keyf"> Registrar Personal</span>
-               
               </button>
-              
+
               <button onClick={btnListaUsers} className="register-button">
                 <span className="animate:bonce">Lista de Usuarios</span>
-                
               </button>
+              </>
+             )}
              
             </motion.div>
           )}
