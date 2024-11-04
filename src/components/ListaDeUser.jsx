@@ -47,7 +47,36 @@ export const ListaDeUser = () => {
   useEffect(() => {
     getListaU();
   }, []);
-
+ const handleDelete = (user) => {
+    Swal.fire({
+      title: "¿Estás seguro?",
+      text: "Una vez eliminado, no se podrá recuperar el usuario!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#15616D",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, eliminar!",
+    }).then((response) => {
+      if (response.isConfirmed) {
+        deleteUserOfList(user);
+        Swal.fire({
+          title: "Usuario eliminado!",
+          text: "El usuario ha sido eliminado exitosamente.",
+          icon: "success",
+          confirmButtonColor: "#15616D",
+          confirmButtonText: "Aceptar",
+        });
+      } else {
+        Swal.fire({
+          title: "Cancelado Correctamenete",
+          text: "Proceso cancelado",
+          icon: "success",
+          confirmButtonColor: "#15616D",
+          confirmButtonText: "Aceptar",}
+        );
+      }
+    });
+  };
   const deleteUserOfList = async (user) => {
     console.log("Eliminando usuario con RUT:", user.rut);
     try {
@@ -163,7 +192,7 @@ export const ListaDeUser = () => {
                 <td>
                   <button
                     className="boton-eliminar"
-                    onClick={() => deleteUserOfList(user)}
+                    onClick={() => handleDelete(user)}
                   >
                     <img
                       style={{ width: "15px" }}
