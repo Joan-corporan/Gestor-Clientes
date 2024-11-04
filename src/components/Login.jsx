@@ -78,6 +78,8 @@ const Login = () => {
       localStorage.setItem("token", token);
       localStorage.setItem("userName", user.nombre);
       localStorage.setItem("userRut", user.rut);
+      localStorage.setItem("admin", user.admin);
+
 
       setloginUser({
         rut: "",
