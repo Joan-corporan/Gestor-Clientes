@@ -121,7 +121,7 @@ console.log(".........................................")
             }}
           >
             {nombreUserLogiado}
-            <img style={{marginLeft:"10px"}} src="public/user.svg" alt="" />
+            <img style={{marginLeft:"10px"}} src="/user.svg" alt="" />
             <button style={{marginLeft:"30px", backgroundColor:"#15616D" }}  onClick={handleLogout} >
                 
             <img  src="/logout.svg" alt="icon" />
