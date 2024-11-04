@@ -47,6 +47,7 @@ export function useFiltradoCliente() {
       text:' No podrás revertir esta acción',
       icon:'warning',
       showCancelButton: true,
+      confirmButtonColor: "#15616D",
       confirmButtonText:'Aceptar',
       cancelButtonText:'Cancelar'
       
@@ -60,6 +61,7 @@ export function useFiltradoCliente() {
           title: 'Éxito',
           text: 'Operación cancelada',
           icon: 'success',
+          confirmButtonColor: "#15616D",
           confirmButtonText: 'Aceptar'
         });
       }
