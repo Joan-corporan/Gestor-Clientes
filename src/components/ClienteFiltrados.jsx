@@ -66,7 +66,6 @@ const ClientesFiltrados = () => {
                         name="id_sucursal"
                         value={filters.id_sucursal}
                         onChange={handleChange}
-                        style={{ color: "gray" }}
                       >
                         <option disabled value="">
                           Selecciona una sucursal
