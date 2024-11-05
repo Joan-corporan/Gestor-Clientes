@@ -271,7 +271,7 @@ const FormularioCliente = () => {
       </tr>
  <tr>
         <td>
-          <label htmlFor="genero">Genero:</label>
+          <label htmlFor="genero">Género:</label>
         </td>
         <td>
           <select style={{ color:"gray"}}
@@ -279,11 +279,11 @@ const FormularioCliente = () => {
             name="genero"
             value={cliente.genero}
             onChange={handleChange}
-            placeholder="Selecciona una sucursal"
+            placeholder="Selecciona un Género"
           >
             
             <option style={{color:"gray"}} disabled value="">
-              Selecciona un Genero
+              Selecciona un Género
             </option>
             <option value="Femenino">Femenino</option>
             <option value="Masculino">Masculino</option>
