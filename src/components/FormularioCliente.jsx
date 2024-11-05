@@ -270,28 +270,26 @@ const FormularioCliente = () => {
         </td>
       </tr>
  <tr>
-        <td>
-          <label htmlFor="genero">Género:</label>
-        </td>
-        <td>
-          <select style={{ color:"gray"}}
-            id="genero"
-            name="genero"
-            value={cliente.genero}
-            onChange={handleChange}
-            placeholder="Selecciona un Género"
-          >
-            
-            <option style={{color:"gray"}} disabled value="">
-              Selecciona un Género
-            </option>
-            <option value="Femenino">Femenino</option>
-            <option value="Masculino">Masculino</option>
-            
-          </select>
-        
-        </td>
-      </tr>
+                <td>
+                  <label htmlFor="genero">Género:</label>
+                </td>
+                <td>
+                  <select
+                    name="genero"
+                    id="genero"
+                    value={cliente.genero}
+                    onChange={handleChange}
+                    placeholder="Selecciona un Género"
+                  >
+                    <option disabled value="">
+                      Selecciona un género
+                    </option>
+                    <option value="Femenino">Femenino</option>
+                    <option value="Masculino">Masculino</option>
+                  </select>
+                 
+                </td>
+              </tr>
       <tr>
         <td colSpan="2" className="button-row">
           <button type="submit"  style={{ backgroundColor: "#15616D", marginTop: "10px" }} className="btn-crear azul">
