@@ -44,12 +44,14 @@ const FormularioCliente = () => {
       cliente.nombre_cliente.trim().length === 0 || 
       cliente.email_cliente.trim().length === 0 || 
       cliente.telefono_cliente.trim().length === 0 || 
-      cliente.rut_cliente.trim().length === 0
+      cliente.rut_cliente.trim().length === 0 ||
+      cliente.genero.trim().length===0
     ) {
       return Swal.fire({
         title: "¡Error!",
         text: "Todos los campos son obligatorios",
         icon: "error",
+        confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -61,6 +63,7 @@ const FormularioCliente = () => {
         title: "¡Error!",
         text:'Sucursal inválido. Solo tipo número',
         icon: "error",
+        confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     
@@ -70,17 +73,28 @@ const FormularioCliente = () => {
         title: "¡Error!",
         text:'Nombre inválido. Solo tipo texto',
         icon: "error",
+        confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
    
     }
-  
+  if(cliente.genero != "Masculino"||cliente.genero != "masculino"||cliente.genero != "Femenino"||cliente.genero != "femenino"){
+    Swal.fire({
+      title:"!Error",
+      text:"Genero incorrecto, Seleccione Masculino o Femenino "
+      icon:"error",
+      confirmButtonColor: "#15616D",
+      confirmButton:"Aceptar"
+    
+    })
+  }
     
     if (!validator.isEmail(cliente.email_cliente)) {
       return Swal.fire({
         title: "¡Error!",
         text:'Email inválido. Debe ser formato email',
         icon: "error",
+        confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       
@@ -90,6 +104,7 @@ const FormularioCliente = () => {
         title: "¡Error!",
         text:'Teléfono inválido. Debe tener 9 dígitos',
         icon: "error",
+        confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     
@@ -99,6 +114,7 @@ const FormularioCliente = () => {
         title: "¡Error!",
         text:'RUT inválido. Debe ser formato rut',
         icon: "error",
+        confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       
@@ -119,6 +135,7 @@ const FormularioCliente = () => {
           title: '¡Éxito!',
           text: `${response.data.message}`,
           icon: 'success',
+          confirmButtonColor: "#15616D",
           confirmButtonText: 'Aceptar',
         });
         console.log(response.data)
@@ -129,6 +146,7 @@ const FormularioCliente = () => {
           email_cliente: '',
           telefono_cliente: '',
           rut_cliente: '',
+          genero:''
         });
       
       } catch (error) {
@@ -139,6 +157,7 @@ const FormularioCliente = () => {
             title: `Error!`,
             text: `${error.response.data.message}`,
             icon: 'error',
+            confirmButtonColor: "#15616D",
             confirmButtonText: 'Aceptar',
           });
         }
@@ -250,7 +269,36 @@ const FormularioCliente = () => {
          
         </td>
       </tr>
-
+ <tr>
+        <td>
+          <label htmlFor="genero">Genero:</label>
+        </td>
+        <td>
+          <select style={{ color:"gray"}}
+            id="genero"
+            name="genero"
+            value={cliente.genero}
+            onChange={handleChange}
+            placeholder="Selecciona una sucursal"
+          >
+            
+            <option style={{color:"gray"}} disabled value="">
+              Selecciona un Genero
+            </option>
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+            
+          </select>
+          <input
+            type="text"
+            name="genero"
+            value={cliente.genero}
+            onChange={handleChange}
+            placeholder="M/F"
+          />
+        
+        </td>
+      </tr>
       <tr>
         <td colSpan="2" className="button-row">
           <button type="submit"  style={{ backgroundColor: "#15616D", marginTop: "10px" }} className="btn-crear azul">
