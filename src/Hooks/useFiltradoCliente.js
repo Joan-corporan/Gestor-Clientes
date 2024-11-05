@@ -88,6 +88,7 @@ export function useFiltradoCliente() {
       Swal.fire({
         title: "¡Éxito!",
         text: `${response.data.message}`,
+        confirmButtonColor: "#15616D",
         icon: "success",
         confirmButtonText: "Aceptar",
       });
@@ -98,6 +99,7 @@ export function useFiltradoCliente() {
         text:
           error.response?.data?.message || "No se pudo eliminar el cliente.",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -119,6 +121,7 @@ export function useFiltradoCliente() {
         title: "��Error!",
         text: "No hay clientes para exportar a Excel.",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       return;
@@ -159,6 +162,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: "Sucursal inválida. Solo tipo números positivos",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
@@ -169,6 +173,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: "Nombre inválido. Solo tipo texto",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
@@ -179,6 +184,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: "Fecha desde inválida. Debe ser formato fecha",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
@@ -189,6 +195,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: "Fecha hasta inválida. Debe ser formato fecha",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
@@ -203,6 +210,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: "La fecha 'desde' no puede ser mayor que la fecha 'hasta'.",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
@@ -213,6 +221,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: "Email inválido. Debe ser formato email",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
@@ -226,6 +235,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: "Teléfono inválido. Debe tener 9 dígitos",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
@@ -236,6 +246,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: "RUT inválido. Debe ser formato Rut",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
@@ -263,6 +274,7 @@ export function useFiltradoCliente() {
           title: "¡Error!",
           text: "Debes colocar valores para poder filtrar",
           icon: "error",
+            confirmButtonColor: "#15616D",
           confirmButtonText: "Aceptar",
         });
       }
@@ -286,6 +298,7 @@ export function useFiltradoCliente() {
         title: "¡Error!",
         text: `Error: ${err.response.data.message}`,
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       setLoading(false);
