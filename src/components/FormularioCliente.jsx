@@ -81,7 +81,7 @@ const FormularioCliente = () => {
   if(cliente.genero != "Masculino"||cliente.genero != "masculino"||cliente.genero != "Femenino"||cliente.genero != "femenino"){
     Swal.fire({
       title:"!Error",
-      text:"Genero incorrecto, Seleccione Masculino o Femenino "
+      text:"Genero incorrecto, Seleccione Masculino o Femenino ",
       icon:"error",
       confirmButtonColor: "#15616D",
       confirmButton:"Aceptar"
