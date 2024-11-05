@@ -54,6 +54,7 @@ const Register = () => {
         title: "¡Error!",
         text: `Debes llenar los campos RUT, Nombre y Contraseña`,
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -62,6 +63,7 @@ const Register = () => {
         title: "¡Error!",
         text:"No se encontró el token de autenticación. Inicia sesión."   ,
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       }); 
       
@@ -72,6 +74,7 @@ const Register = () => {
         title: "¡Error!",
         text:"El rut ingresado no es válido"   ,
         icon: "error",
+        confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });  ;
     }
@@ -80,6 +83,7 @@ const Register = () => {
         title: "¡Error!",
         text:"La contraseña debe tener al menos 6 caracteres, incluir una letra mayúscula, una letra minúscula y un número"   ,
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       }); 
     }
@@ -88,6 +92,7 @@ const Register = () => {
         title: "¡Error!",
         text: "El nombre ingresado no es válido",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       }); 
     }
@@ -96,6 +101,7 @@ const Register = () => {
         title: "¡Error!",
         text: `"Las contraseñas no coinciden"`,
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -122,6 +128,7 @@ const Register = () => {
             title: '¡Exito!',
             text: `${response.data.message}`,
             icon: 'success',
+            confirmButtonColor: "#15616D",
             confirmButtonText: 'Aceptar',
           });
           setErrores("");
@@ -133,6 +140,7 @@ const Register = () => {
         title: '¡Error!',
         text: errorMessage,
         icon: 'error',
+          confirmButtonColor: "#15616D",
         confirmButtonText: 'Aceptar',
       });
     }
