@@ -20,6 +20,7 @@ const FormularioCliente = () => {
     email_cliente: '',
     telefono_cliente: '',
     rut_cliente: '',
+    genero:''
   });
   
 
