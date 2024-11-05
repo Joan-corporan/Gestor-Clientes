@@ -187,7 +187,7 @@ const FormularioCliente = () => {
           <label htmlFor="id_sucursal">Sucursal:</label>
         </td>
         <td>
-          <select style={{ color:"gray"}}
+          <select
             id="id_sucursal"
             name="id_sucursal"
             value={cliente.id_sucursal}
