@@ -52,6 +52,7 @@ export function useModal() {
         title: "¡Error!",
         text: "Email inválido. Debe ser formato email",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -63,6 +64,7 @@ export function useModal() {
         title: "¡Error!",
         text: "Teléfono inválido. Debe tener 9 dígitos",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -74,6 +76,7 @@ export function useModal() {
         title: "¡Error!",
         text: "RUT inválido. Debe ser formato rut",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -85,6 +88,7 @@ export function useModal() {
         title: "¡Error!",
         text: "Nombre inválido. Solo tipo texto",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -96,6 +100,7 @@ export function useModal() {
         title: "¡Error!",
         text: "Sucursal inválido. Solo tipo número",
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -126,6 +131,7 @@ export function useModal() {
           title: "¡Éxito!",
           text: `${response.data.message}`,
           icon: "success",
+            confirmButtonColor: "#15616D",
           confirmButtonText: "Aceptar",
         });
       }
@@ -135,6 +141,7 @@ export function useModal() {
         title: "¡Error!",
         text: `${error.response.data.message}`,
         icon: "error",
+          confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
