@@ -45,6 +45,7 @@ const Login = () => {
         title: "¡Error!",
         text: `Debes llenar los campos RUT y Contraseña`,
         icon: "error",
+         confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -53,6 +54,7 @@ const Login = () => {
         title: "¡Error!",
         text: "El formato de la contraseña no es válido",
         icon: "error",
+         confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -61,6 +63,7 @@ const Login = () => {
         title: "¡Error!",
         text: "El formato del Rut no es válido",
         icon: "error",
+         confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
     }
@@ -93,6 +96,7 @@ const Login = () => {
         title: "¡Error!",
         text: `${error.response.data.message}`,
         icon: "error",
+         confirmButtonColor: "#15616D",
         confirmButtonText: "Aceptar",
       });
       console.error("Error al iniciar sesión:", error);
