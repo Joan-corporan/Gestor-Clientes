@@ -129,6 +129,7 @@ export const Dashboard = () => {
           title: "Error al obtener los usuarios!",
           text: `${error.response.data.message}`,
           icon: "error",
+            confirmButtonColor: "#15616D",
           confirmButtonText: "Aceptar",
         })
       }
