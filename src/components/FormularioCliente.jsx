@@ -289,13 +289,6 @@ const FormularioCliente = () => {
             <option value="Masculino">Masculino</option>
             
           </select>
-          <input
-            type="text"
-            name="genero"
-            value={cliente.genero}
-            onChange={handleChange}
-            placeholder="M/F"
-          />
         
         </td>
       </tr>
